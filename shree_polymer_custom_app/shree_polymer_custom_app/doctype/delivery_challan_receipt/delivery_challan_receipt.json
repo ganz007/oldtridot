@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MTDCR-.YYYY.-.MM.-.DD.-.#####",
+ "creation": "2022-10-17 16:52:52.842762",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hold_receipt",
+  "section_break_2",
+  "is_internal_mixing",
+  "enter_manually",
+  "manual_scan_spp_batch_number",
+  "scan_barcode",
+  "source_warehouse",
+  "column_break_6",
+  "dc_receipt_date",
+  "column_break_8",
+  "dc_number",
+  "items_section",
+  "dc_items",
+  "section_break_14",
+  "hld_item",
+  "hld_enter_manually",
+  "hld_barcode",
+  "hld_manual_barcode",
+  "hld_warehouse",
+  "hld_items",
+  "stock_entry_reference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.enter_manually==0",
+   "fieldname": "scan_barcode",
+   "fieldtype": "Data",
+   "label": "Scan Barcode",
+   "options": "Barcode"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Items"
+  },
+  {
+   "depends_on": "eval:doc.hold_receipt==0",
+   "fieldname": "dc_items",
+   "fieldtype": "Table",
+   "label": "DC Items",
+   "options": "DC Item"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Warehouse",
+   "mandatory_depends_on": "eval:doc.hold_receipt==0",
+   "options": "Warehouse",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Challan Receipt",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_internal_mixing",
+   "fieldtype": "Check",
+   "label": "Is Internal Mixing?"
+  },
+  {
+   "default": "0",
+   "fieldname": "enter_manually",
+   "fieldtype": "Check",
+   "label": "Enter Barcode Manually?"
+  },
+  {
+   "depends_on": "eval:doc.enter_manually==1",
+   "fieldname": "manual_scan_spp_batch_number",
+   "fieldtype": "Data",
+   "label": "Barcode"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "dc_receipt_date",
+   "fieldtype": "Date",
+   "label": "DC Receipt Date"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "dc_number",
+   "fieldtype": "Data",
+   "label": "DC Number"
+  },
+  {
+   "fieldname": "stock_entry_reference",
+   "fieldtype": "Data",
+   "label": "Stock Entry Reference",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "hold_receipt",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Hold Receipt"
+  },
+  {
+   "depends_on": "eval:doc.hold_receipt==0",
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.hold_receipt==1",
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hld_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "mandatory_depends_on": "eval:doc.hold_receipt==1",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "hld_item",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "hld_items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Mixing Center Holding Item"
+  },
+  {
+   "depends_on": "eval:doc.hld_enter_manually == 0",
+   "fieldname": "hld_barcode",
+   "fieldtype": "Data",
+   "label": "Scan Barcode",
+   "options": "Barcode"
+  },
+  {
+   "default": "0",
+   "fieldname": "hld_enter_manually",
+   "fieldtype": "Check",
+   "label": "Enter Manually"
+  },
+  {
+   "depends_on": "eval:doc.hld_enter_manually == 1",
+   "fieldname": "hld_manual_barcode",
+   "fieldtype": "Data",
+   "label": "Enter Barcode"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-01-06 20:21:28.363138",
+ "modified_by": "Administrator",
+ "module": "Shree Polymer Custom App",
+ "name": "Delivery Challan Receipt",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

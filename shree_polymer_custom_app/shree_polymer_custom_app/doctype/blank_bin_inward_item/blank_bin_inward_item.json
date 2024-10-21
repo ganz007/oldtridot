@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-01-28 11:23:16.303396",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bin_code",
+  "item",
+  "compound_code",
+  "spp_batch_number",
+  "column_break_4",
+  "bin_weight_kgs",
+  "bin_gross_weight",
+  "bin_net_weight",
+  "batch_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "compound_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Compound Code"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bin_gross_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gross Weight (Kgs)"
+  },
+  {
+   "fieldname": "bin_net_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Net Weight (Kgs)"
+  },
+  {
+   "fieldname": "bin_weight_kgs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bin Weight (Kgs)"
+  },
+  {
+   "fieldname": "bin_code",
+   "fieldtype": "Data",
+   "label": "Bin Code"
+  },
+  {
+   "fieldname": "spp_batch_number",
+   "fieldtype": "Data",
+   "label": "Spp Batch Number"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "label": "Batch No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-30 14:48:49.835724",
+ "modified_by": "Administrator",
+ "module": "Shree Polymer Custom App",
+ "name": "Blank Bin Inward Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
