@@ -1,0 +1,242 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "INSP-.#####",
+ "creation": "2023-03-28 16:31:13.024001",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inspection_type",
+  "scan_inspector",
+  "scan_production_lot",
+  "sample_or_trial",
+  "machine_no",
+  "total_inspected_qty",
+  "total_inspected_qty_nos",
+  "batch_no",
+  "message",
+  "column_break_5",
+  "lot_no",
+  "product_ref_no",
+  "operator_name",
+  "inspector_name",
+  "inspector_code",
+  "spp_batch_number",
+  "defect_section",
+  "type_of_defect",
+  "rejected_qty",
+  "add",
+  "items",
+  "total_rejected_qty",
+  "total_rejected_qty_in_percentage",
+  "total_rejected_qty_kg",
+  "stock_entry_reference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "inspection_type",
+   "fieldtype": "Select",
+   "label": "Inspection Type",
+   "options": "Patrol Inspection\nLine Inspection\nLot Inspection\nIncoming Inspection\nFinal Inspection"
+  },
+  {
+   "fieldname": "scan_inspector",
+   "fieldtype": "Data",
+   "label": "Scan inspector",
+   "options": "Barcode"
+  },
+  {
+   "fieldname": "scan_production_lot",
+   "fieldtype": "Data",
+   "label": "Scan Production Lot",
+   "options": "Barcode"
+  },
+  {
+   "default": "0",
+   "fieldname": "sample_or_trial",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Sample or Trial"
+  },
+  {
+   "fieldname": "machine_no",
+   "fieldtype": "Data",
+   "label": "Machine No",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.inspection_type == \"Line Inspection\" || doc.inspection_type == \"Lot Inspection\"",
+   "fieldname": "total_inspected_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Total Inspected Qty (Kgs)",
+   "mandatory_depends_on": "eval:doc.inspection_type == \"Line Inspection\" || doc.inspection_type == \"Lot Inspection\"",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "label": "Batch No",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.sample_or_trial",
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "label": "Message",
+   "mandatory_depends_on": "eval:doc.sample_or_trial"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Data",
+   "label": "Lot No",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_ref_no",
+   "fieldtype": "Data",
+   "label": "Product Ref No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "operator_name",
+   "fieldtype": "Data",
+   "label": "Operator Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspector_name",
+   "fieldtype": "Data",
+   "label": "Inspector Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspector_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Inspector ID",
+   "options": "Employee",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "spp_batch_number",
+   "fieldtype": "Data",
+   "label": "SPP Batch Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "defect_section",
+   "fieldtype": "Section Break",
+   "label": "Defect"
+  },
+  {
+   "fieldname": "type_of_defect",
+   "fieldtype": "Select",
+   "label": "Type Of Defect",
+   "options": "FLOW-(FL)\nBUBBLE-(BU) / BLISTER-(BL)\nCUTMARK-(CU)\nDEFLASH-(DF)\nRIB\nFOREIGN PARTICLE-(FP)\nUNDER FILL-( UF )\nDIPRESSION-(DP)\nUNDER CURE-(UC)\nSURFACE DEFECT-(SD)\nOVER CURE-(OC) /FAST CURE\nBURST / TEAR\nBLACK MARK"
+  },
+  {
+   "fieldname": "rejected_qty",
+   "fieldtype": "Int",
+   "label": "Rejected Qty (No.)"
+  },
+  {
+   "fieldname": "add",
+   "fieldtype": "Button",
+   "label": "Add"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Inspection Entry Item"
+  },
+  {
+   "fieldname": "total_rejected_qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Rejected Qty (No.)",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_rejected_qty_in_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Total Rejected Qty In %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_entry_reference",
+   "fieldtype": "Data",
+   "label": "Stock Entry Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Inspection Entry"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Inspection Entry"
+  },
+  {
+   "depends_on": "eval:doc.inspection_type == \"Line Inspection\" || doc.inspection_type == \"Lot Inspection\"",
+   "fieldname": "total_rejected_qty_kg",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Total Rejected Qty (Kg)",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.inspection_type == \"Incoming Inspection\" || doc.inspection_type == \"Patrol Inspection\" || doc.inspection_type == \"Final Inspection\"",
+   "fieldname": "total_inspected_qty_nos",
+   "fieldtype": "Int",
+   "label": "Total Inspected Qty (No's)",
+   "mandatory_depends_on": "eval:doc.inspection_type == \"Incoming Inspection\" || doc.inspection_type == \"Patrol Inspection\" || doc.inspection_type == \"Final Inspection\"",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-05 15:17:44.606404",
+ "modified_by": "Administrator",
+ "module": "Shree Polymer Custom App",
+ "name": "Inspection Entry",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
