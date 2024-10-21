@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include shree_polymer_custom_app *.css
+recursive-include shree_polymer_custom_app *.csv
+recursive-include shree_polymer_custom_app *.html
+recursive-include shree_polymer_custom_app *.ico
+recursive-include shree_polymer_custom_app *.js
+recursive-include shree_polymer_custom_app *.json
+recursive-include shree_polymer_custom_app *.md
+recursive-include shree_polymer_custom_app *.png
+recursive-include shree_polymer_custom_app *.py
+recursive-include shree_polymer_custom_app *.svg
+recursive-include shree_polymer_custom_app *.txt
+recursive-exclude shree_polymer_custom_app *.pyc
