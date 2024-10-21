@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-19 18:47:51.138636",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "spp_process",
+  "column_break_2",
+  "designation"
+ ],
+ "fields": [
+  {
+   "fieldname": "spp_process",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "SPP Process",
+   "options": "Transfer Compound to Sheeting Warehouse\nBlanking\nMoulding\nBlank Bin Rejection Inspector\nPatrol Inspector\nLine Inspector\nLot Inspector\nIncoming Inspector\nFinal Inspector"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-29 19:32:55.861179",
+ "modified_by": "Administrator",
+ "module": "Shree Polymer Custom App",
+ "name": "SPP Designation Mapping",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

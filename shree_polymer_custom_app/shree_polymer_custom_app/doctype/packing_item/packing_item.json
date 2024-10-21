@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PCKGI-.#####",
+ "creation": "2023-04-05 19:30:09.140107",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "lot_no",
+  "product_ref",
+  "spp_batch_no",
+  "column_break_fvah4",
+  "qty_nos",
+  "batch_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "lot_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Lot No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fvah4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qty_nos",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Qty (No's)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "product_ref",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Product Ref",
+   "read_only": 1
+  },
+  {
+   "fieldname": "spp_batch_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "SPP Batch No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Batch No.",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-06 20:18:34.812601",
+ "modified_by": "Administrator",
+ "module": "Shree Polymer Custom App",
+ "name": "Packing Item",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

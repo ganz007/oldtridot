@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PACKG-.#####",
+ "creation": "2023-04-05 19:24:24.357763",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scan_section",
+  "scan_lot_no",
+  "qty_nos",
+  "add",
+  "column_break_0byw9",
+  "product_ref",
+  "spp_batch_no",
+  "batch_no",
+  "items_section",
+  "items",
+  "stock_entry_reference",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_ref",
+   "fieldtype": "Data",
+   "label": "Product Ref",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qty_nos",
+   "fieldtype": "Int",
+   "label": "Qty (No's)"
+  },
+  {
+   "fieldname": "scan_lot_no",
+   "fieldtype": "Data",
+   "label": "Scan Lot No",
+   "options": "Barcode"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Packing Item"
+  },
+  {
+   "fieldname": "column_break_0byw9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "label": "Batch No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "spp_batch_no",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "SPP Batch No.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scan_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "add",
+   "fieldtype": "Button",
+   "label": "Add"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Packing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_entry_reference",
+   "fieldtype": "Data",
+   "label": "Stock Entry Reference",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-06 20:17:54.672104",
+ "modified_by": "Administrator",
+ "module": "Shree Polymer Custom App",
+ "name": "Packing",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
